@@ -1,0 +1,69 @@
+:root {
+    --canvas-width: 500px; 
+    --canvas-height: 500px; 
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+    
+}
+h1 {
+    font-size: 40px;
+}
+
+body {
+    background: linear-gradient(to top, var(--primary-light), var(--secondary-light));
+    color: var(--primary-dark); 
+    font-family: "Trebuchet MS", 'Times New Roman';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    
+    
+}
+
+#canvas {
+    display: flex; 
+    flex-wrap: wrap;
+    align-content: flex-start;  /* why this? */
+    background-color: #ffffff; 
+    /* the size of the canvas is static */ 
+    width: var(--canvas-width);
+    height: var(--canvas-height);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    gap: 25px;
+}
+
+button {
+    font-family: inherit;
+    border: 1px solid var(--primary-dark);
+    background-color: VAR(--secondary-light);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+button:hover, .selected {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+}
+
+
+#paint.selected {
+    background-color: transparent;
+
+}
